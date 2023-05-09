@@ -1,0 +1,77 @@
+@forward "globals";
+@forward "styles";
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.moon {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: var(--text-color);
+  animation: moveMoon 10s infinite 1.5s;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-animation: moveMoon 10s infinite 1.5s;
+}
+
+.sun {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: var(--primary-yellow);
+  border: 6px solid var(--primary-yellow);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+@keyframes moveMoon {
+  0% {
+    transform: translateX(300px);
+    -webkit-transform: translateX(300px);
+    -moz-transform: translateX(300px);
+    -ms-transform: translateX(300px);
+    -o-transform: translateX(300px);
+    background-color: var(--text-color);
+  }
+  50% {
+    transform: translateX(-20px);
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    -o-transform: translateX(-20px);
+    background-color: var(--background-color);
+  }
+  100% {
+    transform: translateX(-340px);
+    -webkit-transform: translateX(-340px);
+    -moz-transform: translateX(-340px);
+    -ms-transform: translateX(-340px);
+    -o-transform: translateX(-340px);
+    background-color: var(--text-color);
+  }
+}
+
+@keyframes ligtToNight {
+  0% {
+    background-color: var(--text-color);
+  }
+  50% {
+    background-color: var(--background-color);
+  }
+  100% {
+    background-color: var(--text-color);
+  }
+}
